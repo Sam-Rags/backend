@@ -16,4 +16,4 @@ async function run() {
 run().catch(console.dir)
 
 //export the module
-module.exports = mongoose
+module.exports = mongoose;

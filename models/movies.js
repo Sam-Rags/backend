@@ -1,5 +1,5 @@
 // required db import to interact with database
-const db = require("../db")
+const db = require("../db");
 
 const Movie = db.model("Movie", {
     //TODO create Movie model
@@ -9,6 +9,6 @@ const Movie = db.model("Movie", {
     imdbLink:       {type: String},
     description:    {type: String}
 
-})
+});
 
-module.exports = Movie
+module.exports = Movie;
