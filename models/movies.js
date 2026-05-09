@@ -7,7 +7,8 @@ const Movie = db.model("Movie", {
     releaseYear:    {type: Number},
     rating:         {type: String},
     imdbLink:       {type: String},
-    description:    {type: String}
+    description:    {type: String},
+    genre:          {type: [String]}
 
 });
 
