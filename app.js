@@ -38,6 +38,16 @@ app.get('/api/movies', async (req, res) => {
     }
 })
 
+app.get('/api/movies/:id', async (req, res) => {
+    try {
+        const movie = await Movie.findById({ _id: req.params.id })
+        res.json(movie)
+    }
+    catch (err) {
+        res.status(400).send(err)
+    }
+})
+
 app.post('/api/movies', async (req, res) => {
     try {
         const movie = await new Movie(req.body)
@@ -83,7 +93,7 @@ app.put('/api/movies/:id', async (req, res) => {
 
 
 const port = 3000
-// app.use("/api", router)
+app.use(router)
 app.listen(port, () => {
     console.log(`Listening on port ${port}`)
 })
